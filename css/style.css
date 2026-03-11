@@ -61,20 +61,16 @@ img{
   backdrop-filter:blur(14px);
 }
 
-.navbar{
-  position:fixed;
-  top:14px;
-  left:50%;
-  transform:translateX(-50%);
-  z-index:50;
-  width:min(var(--container), calc(100% - 28px));
-  margin:0;
-  padding:14px 18px;
-  border-radius:20px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:18px;
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(circle at 10% 10%, rgba(255,41,66,.18), transparent 18%),
+    radial-gradient(circle at 90% 0%, rgba(255,124,141,.10), transparent 18%),
+    linear-gradient(145deg, #030102 0%, #070203 38%, #120607 100%);
+  min-height:100vh;
+  overflow-x:hidden;
+  padding-top:120px;
 }
 
 .brand{
@@ -481,9 +477,22 @@ img{
 
 @media (max-width:820px){
   .navbar{
-    flex-direction:column;
-    align-items:flex-start;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: none;
+  z-index: 9999;
+  width: 100%;
+  padding: 14px 24px;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin: 0;
+  border-left: none;
+  border-right: none;
+}
 
   .nav-links,
   .grid-4,
@@ -529,4 +538,5 @@ img{
   }
 
 }
+
 
