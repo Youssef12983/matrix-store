@@ -1,9 +1,31 @@
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("show");
+    });
+  });
+}
+
+const revealElements = document.querySelectorAll(".reveal");
+
+const revealOnScroll = () => {
+  revealElements.forEach((element) => {
+    const windowHeight = window.innerHeight;
+    const elementTop = element.getBoundingClientRect().top;
+    const visiblePoint = 100;
+
+    if (elementTop < windowHeight - visiblePoint) {
+      element.classList.add("active");
     }
   });
-}, { threshold: 0.12 });
+};
 
-document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);

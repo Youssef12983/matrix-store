@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Matrix Red Store</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <header class="header">
+    <div class="container navbar glass">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.png" alt="Matrix Red Store Logo" class="brand-logo" />
+        <div class="brand-text">
+          <span class="brand-name">Matrix Red</span>
+          <span class="brand-subtitle">Luxury Digital Store</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="products/categories.html">Categories</a>
+        <a href="products/featured.html">Featured</a>
+        <a href="products/vip-pack.html">VIP Pack</a>
+        <a href="products/faq.html">FAQ</a>
+        <a href="products/coming-soon.html">Coming Soon</a>
+        <a href="https://discord.gg/eRFeMQBgJJ" target="_blank" class="discord-link">Discord</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading reveal active">
+        <span class="section-tag">Contact Us</span>
+        <h2>Reach Us Easily</h2>
+        <p>Choose your preferred platform to contact us and order your digital product.</p>
+      </div>
+
+      <div class="features-grid">
+
+        <a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank" class="feature-box glass contact-box reveal active">
+          <div class="contact-top">
+            <img src="assets/instagram.png" alt="Instagram">
+            <h3>Instagram</h3>
+          </div>
+          <p>Send us a message on Instagram to place your order.</p>
+        </a>
+
+        <a href="https://wa.me/YOUR_NUMBER" target="_blank" class="feature-box glass contact-box reveal active delay-1">
+          <div class="contact-top">
+            <img src="assets/whatsapp.png" alt="WhatsApp">
+            <h3>WhatsApp</h3>
+          </div>
+          <p>Contact us instantly via WhatsApp for fast replies.</p>
+        </a>
+
+        <a href="https://discord.gg/eRFeMQBgJJ" target="_blank" class="feature-box glass contact-box reveal active delay-2">
+          <div class="contact-top">
+            <img src="assets/Discord.png" alt="Discord">
+            <h3>Discord</h3>
+          </div>
+          <p>Join our Discord server and open a ticket to buy.</p>
+        </a>
+
+        <a href="https://discord.gg/eRFeMQBgJJ" target="_blank" id="vip-box" class="feature-box glass contact-box vip-box reveal active">
+          <div class="contact-top">
+            <img src="assets/vip.jpg" alt="VIP">
+            <h3>VIP Support</h3>
+          </div>
+          <p>Open a VIP ticket on Discord to access exclusive bundles and premium offers.</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>
+        <h3>Matrix Red Store</h3>
+        <p>Luxury digital marketplace for premium subscriptions, games and gift cards.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="products/categories.html">Categories</a>
+        <a href="products/featured.html">Featured</a>
+        <a href="products/vip-pack.html">VIP Pack</a>
+        <a href="products/faq.html">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+  <script>
+    const vipBox = document.getElementById("vip-box");
+    if (window.location.hash === "#vip" && vipBox) {
+      vipBox.classList.add("show-vip");
+    }
+  </script>
+
+</body>
+</html>
