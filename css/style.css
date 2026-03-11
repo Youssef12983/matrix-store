@@ -61,10 +61,13 @@ img{
 }
 
 .navbar{
-  position:sticky;
+  position:fixed;
   top:14px;
+  left:50%;
+  transform:translateX(-50%);
   z-index:50;
-  margin:18px auto 24px;
+  width:min(var(--container), calc(100% - 28px));
+  margin:0;
   padding:14px 18px;
   border-radius:20px;
   display:flex;
@@ -523,4 +526,5 @@ img{
   .small-btn{
     width:100%;
   }
+
 }
